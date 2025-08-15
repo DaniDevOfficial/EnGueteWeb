@@ -5,8 +5,7 @@ export function Landing() {
 
     return (
         <>
-            <Heading> Hey, this Project was generated with a Vite Template</Heading>
-            <Text> Nice time save and now happy hacking 🧠</Text>
+            <Heading>Welcome to EnGuete</Heading>
         </>
     )
 }
