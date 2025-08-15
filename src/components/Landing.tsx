@@ -1,5 +1,4 @@
-import { Heading, Text } from '@chakra-ui/react'
-import React from 'react'
+import {Heading} from '@chakra-ui/react'
 
 export function Landing() {
 
