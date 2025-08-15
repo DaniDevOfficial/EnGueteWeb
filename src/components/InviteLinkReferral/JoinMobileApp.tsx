@@ -1,6 +1,7 @@
-import { Text, Button, Flex, Link, Box, useColorModeValue } from "@chakra-ui/react";
+import {Box, Button, Flex, Link, Text, useColorModeValue} from "@chakra-ui/react";
+import QRCode from 'react-qr-code';
 
-export function JoinMobileApp({ joinToken }: { joinToken: string }) {
+export function JoinMobileApp({joinToken}: { joinToken: string }) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     const link = import.meta.env.VITE_MOBILE_BASE_URL + 'invite?token=' + joinToken;
@@ -28,12 +29,25 @@ export function JoinMobileApp({ joinToken }: { joinToken: string }) {
                 <Text
                     fontSize="2xl"
                     fontWeight="bold"
-                    mb={6}
                     color={titleColor}
                 >
                     Join New Group
                 </Text>
 
+
+                <Box
+                    p={8}
+                >
+
+                    <QRCode value={joinToken ? joinToken : ""} bgColor={'transparent'} style={{
+                        height: "auto",
+                        maxHeight: "30vh",
+                        maxWidth: "100%",
+                        width: "100%",
+                        backgroundColor: 'transparent',
+                        color: "green"
+                    }}/>
+                </Box>
                 <Button
                     as={Link}
                     href={link}
