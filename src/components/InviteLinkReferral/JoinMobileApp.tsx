@@ -4,7 +4,7 @@ import QRCode from 'react-qr-code';
 export function JoinMobileApp({joinToken}: { joinToken: string }) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
-    const link = import.meta.env.VITE_MOBILE_BASE_URL + 'invite?token=' + joinToken;
+    const link = import.meta.env.VITE_MOBILE_BASE_URL + 'app/invite?token=' + joinToken;
 
     const cardBg = useColorModeValue("gray.100", "gray.700");
     const titleColor = useColorModeValue("teal.600", "teal.300");
