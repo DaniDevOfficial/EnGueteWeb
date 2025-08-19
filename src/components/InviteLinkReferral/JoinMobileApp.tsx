@@ -5,6 +5,7 @@ export function JoinMobileApp({joinToken}: { joinToken: string }) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     const link = import.meta.env.VITE_MOBILE_BASE_URL + 'app/invite?token=' + joinToken;
+    const url = window.location.origin + '/#/join/' + joinToken;
 
     const cardBg = useColorModeValue("gray.100", "gray.700");
     const titleColor = useColorModeValue("teal.600", "teal.300");
@@ -39,7 +40,7 @@ export function JoinMobileApp({joinToken}: { joinToken: string }) {
                     p={8}
                 >
 
-                    <QRCode value={joinToken ? joinToken : ""} bgColor={'transparent'} style={{
+                    <QRCode value={url ? url : ""} bgColor={'transparent'} style={{
                         height: "auto",
                         maxHeight: "30vh",
                         maxWidth: "100%",
@@ -50,7 +51,7 @@ export function JoinMobileApp({joinToken}: { joinToken: string }) {
                 </Box>
                 <Button
                     as={Link}
-                    href={link}
+                    href={url}
                     isExternal
                     size="lg"
                     colorScheme="teal"
