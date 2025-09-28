@@ -2,13 +2,11 @@ import {Box, Button, Flex, Link, Text, useColorModeValue} from "@chakra-ui/react
 import QRCode from 'react-qr-code';
 
 export function JoinMobileApp({joinToken}: { joinToken: string }) {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    const link = import.meta.env.VITE_MOBILE_BASE_URL + 'app/invite?token=' + joinToken;
+
     const url = window.location.origin + '/#/join/' + joinToken;
 
-    const cardBg = useColorModeValue("gray.100", "gray.700");
-    const titleColor = useColorModeValue("teal.600", "teal.300");
+    const cardBg = useColorModeValue("gray.100", "gray.600");
+    const titleColor = useColorModeValue("orange.600", "orange.300");
 
     return (
         <Flex
@@ -54,9 +52,9 @@ export function JoinMobileApp({joinToken}: { joinToken: string }) {
                     href={url}
                     isExternal
                     size="lg"
-                    colorScheme="teal"
                     w="full"
                     borderRadius="md"
+                    colorScheme="orange"
                 >
                     Open in EnGuete 📱
                 </Button>

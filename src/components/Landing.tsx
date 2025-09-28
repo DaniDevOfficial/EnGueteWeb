@@ -6,8 +6,12 @@ import {
     Stack,
     useColorModeValue,
 } from "@chakra-ui/react";
+import {useNavigate} from "react-router-dom";
 
 export function Landing() {
+
+    const navigate = useNavigate();
+
     return (
         <Flex
             alignItems="center"
@@ -58,7 +62,14 @@ export function Landing() {
                     >
                         Download on Google Play
                     </Button>
-                    <Button variant="outline" colorScheme="orange" size="lg">
+                    <Button
+                        onClick={() => {
+                            navigate('/privacy');
+                        }}
+                        variant="outline"
+                        colorScheme="orange"
+                        size="lg"
+                    >
                         Privacy Policy
                     </Button>
                 </Stack>
