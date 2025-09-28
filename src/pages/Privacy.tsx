@@ -18,6 +18,7 @@ import {
     chakra,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import {ReactNode} from "react";
 
 export function Privacy () {
     const accent = useColorModeValue("orange.600", "orange.300");
@@ -183,9 +184,14 @@ export function Privacy () {
     );
 }
 
-function PolicyCard (props) {
-    var cardBg = useColorModeValue("white", "gray.800");
-    var borderCol = useColorModeValue("gray.200", "gray.700");
+type SectionProp = {
+    id?: string;
+    children: ReactNode;
+};
+
+function PolicyCard (props: SectionProp) {
+    const cardBg = useColorModeValue("white", "gray.800");
+    const borderCol = useColorModeValue("gray.200", "gray.700");
     return (
         <Box bg={cardBg} borderWidth="1px" borderColor={borderCol} borderRadius="xl" p={{ base: 4, md: 6 }} w="100%" boxShadow="sm">
             {props.children}
@@ -193,8 +199,8 @@ function PolicyCard (props) {
     );
 }
 
-function SectionHeading (props) {
-    var accent = useColorModeValue("orange.600", "orange.300");
+function SectionHeading (props: SectionProp) {
+    const accent = useColorModeValue("orange.600", "orange.300");
     return (
         <Heading as="h2" id={props.id} size="lg" color={accent} mb={2}>
             {props.children}
