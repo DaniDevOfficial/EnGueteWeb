@@ -52,9 +52,6 @@ export function Privacy () {
                         <Button as={RouterLink} to="/" colorScheme="orange" variant="solid">
                             Back to Home
                         </Button>
-                        <Button as={RouterLink} to="/delete-account" colorScheme="orange" variant="outline">
-                            Delete Your Account
-                        </Button>
                         <Button onClick={handlePrint} colorScheme="orange" variant="ghost">
                             Print / Save PDF
                         </Button>
