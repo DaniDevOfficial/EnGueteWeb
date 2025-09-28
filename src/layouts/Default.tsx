@@ -7,8 +7,8 @@ export function DefaultLayout() {
     const {toggleColorMode, colorMode} = useColorMode();
 
     return (
-        <chakra.div width={"100%"}>
-            <chakra.div minHeight={"100vh"} width={"100%"}>
+        <chakra.div minHeight={"100vh"} minWidth={"100vw"}>
+            <chakra.div minHeight={"100vh"} minWidth={"100vw"}>
                 <chakra.main marginBottom={"2rem"}>
                     <Container maxW={"5xl"}>
                         <Outlet/>
