@@ -45,6 +45,7 @@ export function Landing() {
                     Plan together who’s cooking and who’s eating — perfect for families,
                     roommates, and friends. No more confusion, just tasty shared meals.
                     {import.meta.env.VITE_MOBILE_BASE_URL}
+                    {import.meta.env.VITE_BACKEND_URL}
                 </Text>
 
                 <Stack
