@@ -7,6 +7,14 @@ import {
     useColorModeValue,
 } from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+const apiUrl = import.meta.env.VITE_BACKEND_URL
+
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+const mobileApp = import.meta.env.VITE_MOBILE_BASE_URL
 
 export function Landing() {
 
@@ -44,8 +52,8 @@ export function Landing() {
                 >
                     Plan together who’s cooking and who’s eating — perfect for families,
                     roommates, and friends. No more confusion, just tasty shared meals.
-                    {import.meta.env.VITE_MOBILE_BASE_URL}
-                    {import.meta.env.VITE_BACKEND_URL}
+                    {apiUrl}
+                    {mobileApp}
                 </Text>
 
                 <Stack
