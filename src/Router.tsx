@@ -6,6 +6,7 @@ import {OpenMobileInviteLink} from "./pages/OpenMobileInviteLink.tsx";
 import {Privacy} from "./pages/Privacy.tsx";
 import {EmailVerify} from "./pages/EmailVerify.tsx";
 import {ResetPassword} from "./pages/ResetPassword.tsx";
+import {DeleteAccount} from "./pages/DeleteAccount.tsx";
 
 
 
@@ -38,6 +39,10 @@ const router = createHashRouter([
       {
         element: <Privacy />,
         path: 'privacy',
+      },
+      {
+        element: <DeleteAccount />,
+        path: 'deleteAccount',
       }
     ],
   },

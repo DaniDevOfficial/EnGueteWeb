@@ -34,3 +34,21 @@ export async function createNewPassword(token: string, password: string) {
         throw new Error(res.statusText);
     }
 }
+
+export async function deleteAccount(email: string, password: string) {
+    const url = `${apiUrl}auth/deleteAccount`;
+    const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            password: password,
+            email: email
+        }),
+    });
+
+    if (!res.ok) {
+        throw new Error(res.statusText);
+    }
+}
